@@ -24,3 +24,5 @@ C:\Users\Артур Сатиев\source\repos\WpfDesignPractice2\WpfDesignPracti
 C:\Users\Артур Сатиев\source\repos\WpfDesignPractice2\WpfDesignPractice2\obj\Debug\net8.0-windows\WpfDesignPractice2.pdb
 C:\Users\Артур Сатиев\source\repos\WpfDesignPractice2\WpfDesignPractice2\obj\Debug\net8.0-windows\WpfDesignPractice2.genruntimeconfig.cache
 C:\Users\Артур Сатиев\source\repos\WpfDesignPractice2\WpfDesignPractice2\obj\Debug\net8.0-windows\ref\WpfDesignPractice2.dll
+C:\Users\Артур Сатиев\source\repos\WpfDesignPractice2\WpfDesignPractice2\obj\Debug\net8.0-windows\ClearableTextBox.baml
+C:\Users\Артур Сатиев\source\repos\WpfDesignPractice2\WpfDesignPractice2\obj\Debug\net8.0-windows\ClearableTextBox.g.cs
