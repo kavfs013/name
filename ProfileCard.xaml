@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="WpfDesignPractice2.ProfileCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfDesignPractice2"
+             mc:Ignorable="d" 
+              d:DesignHeight="200" d:DesignWidth="300">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Аватар -->
+        <Ellipse Grid.Row="0" Width="80" Height="80" HorizontalAlignment="Center">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="{Binding AvatarPath, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                            Stretch="UniformToFill"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <!-- Имя -->
+        <TextBlock Grid.Row="1" Text="{Binding Name, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                   HorizontalAlignment="Center" Style="{StaticResource BodyTextStyle}" Margin="0,10,0,0"/>
+        <!-- Должность -->
+        <TextBlock Grid.Row="2" Text="{Binding Title, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                   HorizontalAlignment="Center" Style="{StaticResource BodyTextStyle}" Foreground="Gray"/>
+    </Grid>
+</UserControl>
+
+     
+       
+    

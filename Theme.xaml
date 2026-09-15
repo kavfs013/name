@@ -232,4 +232,51 @@
             <!-- устанавливает конкретное свойство элемента-->
         </Setter>
     </Style>
+    <Style x:Key="ModernButton" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="15,10"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" 
+                         Background="{TemplateBinding Background}" 
+                         BorderBrush="{TemplateBinding BorderBrush}" 
+                         BorderThickness="{TemplateBinding BorderThickness}">
+                        <ContentPresenter x:Name="contentPresenter" 
+                                      HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                      Margin="{TemplateBinding Padding}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" 
+                                Value="{StaticResource SecondaryBrush}"/>
+                            <Setter TargetName="border" Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="1.05" ScaleY="1.05"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" 
+                                Value="{StaticResource DarkBrush}"/>
+                            <Setter TargetName="border" Property="RenderTransform">
+                                <Setter.Value>
+                                    <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Background" 
+                                Value="{StaticResource LightBrush}"/>
+                            <Setter TargetName="border" Property="Opacity" Value="0.6"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary> 
